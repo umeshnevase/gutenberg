@@ -97,8 +97,7 @@
 			"__experimentalFontFamily": true,
 			"__experimentalTextDecoration": true,
 			"__experimentalDefaultControls": {
-				"fontSize": true,
-				"lineHeight": true
+				"fontSize": true
 			}
 		}
 	},
