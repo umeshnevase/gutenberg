@@ -9,6 +9,7 @@
 
 ### Bug Fixes
 
+-   Move focus from the filters "Reset" button to the "Add filter" button after resetting, so the button no longer stays visible once there is nothing left to reset.
 -   Move focus between the bulk selection checkboxes only when an interaction with the selection asks for it, so that DataViews no longer competes for focus that an app router recovers after a navigation ([#86932](https://github.com/WordPress/gutenberg/pull/86932)).
 -   Keep hiding empty badge fields in the `grid` and `pickerGrid` layouts with the updated `Badge` from `@wordpress/ui` ([#87074](https://github.com/WordPress/gutenberg/pull/87074)).
 -   Add a ring around the selection checkbox in the `grid` and `pickerGrid` layouts, so it stays visible on any preview ([#87223](https://github.com/WordPress/gutenberg/pull/87223)).

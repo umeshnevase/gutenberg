@@ -1,3 +1,4 @@
+import type { RefObject } from '@wordpress/element';
 import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import type { NormalizedFilter, View } from '../../types';
@@ -6,12 +7,14 @@ interface ResetFilterProps {
 	filters: NormalizedFilter[];
 	view: View;
 	onChangeView: ( view: View ) => void;
+	addFilterRef?: RefObject< HTMLButtonElement | null >;
 }
 
 export default function ResetFilter( {
 	filters,
 	view,
 	onChangeView,
+	addFilterRef,
 }: ResetFilterProps ) {
 	const isPrimary = ( field: string ) =>
 		filters.some(
@@ -39,6 +42,9 @@ export default function ResetFilter( {
 					filters:
 						view.filters?.filter( ( f ) => !! f.isLocked ) || [],
 				} );
+				// The button becomes disabled (and visually hidden) after
+				// resetting, so move focus to a stable control.
+				addFilterRef?.current?.focus();
 			} }
 		>
 			{ __( 'Reset' ) }

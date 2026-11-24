@@ -49,6 +49,7 @@ function Filters( { className }: { className?: string } ) {
 			filters={ filters }
 			view={ view }
 			onChangeView={ onChangeView }
+			addFilterRef={ addFilterRef }
 		/>
 	);
 
